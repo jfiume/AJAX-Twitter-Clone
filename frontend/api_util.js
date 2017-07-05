@@ -16,7 +16,18 @@ const APIUtil = {
       dataType: "JSON",
       data: { user_id: id },
     });
+  },
+
+  searchUsers: (queryVal, success) => {
+    return $.ajax({
+      url: `/users/search`,
+      method: 'POST',
+      dataType: "JSON",
+      data: { query: queryVal },
+      success: success
+    });
   }
+  
 };
 
 

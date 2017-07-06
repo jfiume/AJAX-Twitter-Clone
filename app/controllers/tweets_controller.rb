@@ -10,8 +10,8 @@ class TweetsController < ApplicationController
     if @tweet.save
       # redirect_to request.referrer
       respond_to do |format|
-        format.html { redirect_to request.referrer }
         format.json { render :show }
+        format.html { redirect_to request.referrer }
       end
     else
       # Lazy: even respond with JSON to invalid HTML request.
@@ -24,7 +24,7 @@ class TweetsController < ApplicationController
   end
 
   def show
-
+    
   end
 
   private

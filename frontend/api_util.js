@@ -27,12 +27,12 @@ const APIUtil = {
     });
   },
 
-  createTweet: data => {
+  createTweet: tweet => {
     return $.ajax({
       url: "/tweets",
       method: "POST",
-      dataType: "JSON",
-      data: { data }
+      dataType: "json",
+      data: tweet
     });
   }
 
